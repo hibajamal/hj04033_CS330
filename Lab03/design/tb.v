@@ -17,6 +17,9 @@ mux m1
 initial
 sel = 1'b0;
 
+initial
+#15 a = 64'hAB;
+  
 always 
 #10 sel = ~sel;
 
