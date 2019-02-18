@@ -1,28 +1,18 @@
 module tb();
   
     reg [31:0]instruction;
-    wire[6:0]opcode;
-    wire[4:0]rd;
-    wire[2:0]funct3; 
-    wire[4:0]rs1; 
-    wire[4:0]rs2; 
-    wire[6:0]funct7;
+    wire[63:0] imm_data;
     
-    InstructionParser ip0
+    ImmediateDataExtractor imdg0
     (
       .instruction(instruction),
-      .opcode(opcode),
-      .rd(rd),
-      .funct3(funct3),
-      .rs1(rs1),
-      .rs2(rs2),
-      .funct7(funct7)
+      .imm_data(imm_data)
       );
       
      
 initial
 begin
-#15 instruction = 32'b01010111011110101;    //opcode
+#0 instruction = 32'b01010111011110101;    
 
 #310 instruction = 32'b1111111111110111111100000000;
 end
