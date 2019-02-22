@@ -1,0 +1,27 @@
+module ALU_6_bit();
+  
+input [5:0] a;
+input [5:0] b;
+input Cin;
+input [3:0]ALUop;
+wire Carryout;
+wire [5:0] Result;
+  
+top t0(
+.a(a),
+.b(b),
+.Cin(Cin),
+.ALUop(ALUop),
+.Carryout(Carryout),
+.Result(Result)
+);
+
+initial
+begin
+  a = 6'b000000;
+  b = 6'b000111;
+  Cin = 1'b1;
+  ALUop = 4'b0001;
+end
+  
+endmodule
