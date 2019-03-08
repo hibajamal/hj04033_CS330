@@ -30,7 +30,7 @@ begin
   Instruction[7:0] = InstructionMemory[Inst_Address];
   Instruction[15:8] = InstructionMemory[Inst_Address + 1];
   Instruction[23:16] = InstructionMemory[Inst_Address + 2];
-  Instruction[31:23] = InstructionMemory[Inst_Address + 3];
+  Instruction[31:24] = InstructionMemory[Inst_Address + 3];
 end
 
 endmodule

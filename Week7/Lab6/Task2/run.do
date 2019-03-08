@@ -1,4 +1,4 @@
-vlog tb.v top.v instructionParser.v registerFile.v
+vlog tb.v Data_Memory.v 
 
 vsim -novopt work.tb
 

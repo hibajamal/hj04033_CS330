@@ -15,8 +15,8 @@ begin
   ReadData2 = RS2;
   if (reset)
     begin
-    ReadData1 = 1'b0;
-    ReadData2 = 1'b0;
+    ReadData1 = 63'b0;
+    ReadData2 = 63'b0;
     end
 end 
 
