@@ -1,23 +1,35 @@
-module registerFile(
-input clk, reset, RegWrite,
-input [63:0] WriteData, 
-input [4:0] RS1, [4:0] RS2, [4:0] RD,
-output reg [63:0] ReadData1, reg [63:0] ReadData2
+module tb();
+
+reg [31:0] instruction;
+wire [63:0] ReadData1;
+wire [63:0] ReadData2;
+
+reg clk;
+reg reset;
+reg RegWrite; 
+reg [63:0] WriteData;
+
+top t0(
+  .instruction(instruction),
+  .ReadData1(ReadData1),
+  .ReadData2(ReadData2),
+  .clk(clk),
+  .reset(reset),
+  .RegWrite(RegWrite), 
+  .WriteData(WriteData)
 );
 
-reg [31:0] Registers [63:0];
-
-always @ (posedge clk or RegWrite or reset)
+initial
 begin
-  if (RegWrite)
-    Registers[RD] = WriteData;
-  ReadData1 = RS1;
-  ReadData2 = RS2;
-  if (reset)
-    begin
-    ReadData1 = 1'b0;
-    ReadData2 = 1'b0;
-    end
-end 
+  instruction = 32'b00111111100000100100100101;
+  clk = 1;
+  reset = 0;
+  WriteData = 64'b1;
+  RegWrite = 1;
+  
+  #15 reset = 1;
+  #15 clk = 1;
+  #15 reset = ~reset;
+end
 
 endmodule
