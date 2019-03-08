@@ -6,7 +6,7 @@ module Data_Memory
   output reg [63:0] Read_Data
 );
 
-reg [63:0] DataMemory [7:0];
+  reg [7:0] DataMemory [63:0];
 
 //randomized generated script of values for DataMemory
 initial
