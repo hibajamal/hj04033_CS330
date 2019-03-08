@@ -2,7 +2,7 @@ module Instruction_Memory(
 input [63:0] Inst_Address,
 output reg [31:0] Instruction
 );
-reg [15:0] InstructionMemory [7:0];
+  reg [7:0] InstructionMemory [15:0];
 
 initial
 begin
