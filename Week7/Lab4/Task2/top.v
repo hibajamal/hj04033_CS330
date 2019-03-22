@@ -22,7 +22,7 @@ InstructionParser ip0(
   .rd(RD),
   .funct3(funct3),
   .rs1(RS1),
-  .rs2(RS1),
+  .rs2(RS2),
   .funct7(funct7)
 );
 
