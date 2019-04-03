@@ -21,15 +21,18 @@ top t0(
 
 initial
 begin
-  instruction = 32'b0101;
+  instruction = 32'b00111111100000100100100101;
   clk = 0;
   reset = 0;
   WriteData = 64'b1;
   RegWrite = 1;
   
   #15 reset = 1;
-  #25 clk = 1;
-  #35 reset = ~reset;
+  #15 reset = 0;
 end
 
+always
+	 begin
+	   #10 clk = ~clk;
+	 end
 endmodule
