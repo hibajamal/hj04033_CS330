@@ -12,15 +12,19 @@ top_control tc0(
 
 initial
 begin
-	Opcode = 7'b0110011;	
+	/*Opcode = 7'b0110011;	
 	Funct = 0;
 	
 	#5 Funct = 1;
 	
 	#15 Funct = 4'b1000;
-	
+	*/
 	Opcode = 7'b0110011;	//r-type
-	
+	#2 Funct = 4'b0000;
+	#2 Funct = 4'b0111;
+	#2 Funct = 4'b0110;
+	#2 Funct = 4'b1000;
+
 	#10 Opcode = 7'b0100011;	//s-type
 	
 	#15 Funct = 4'b0111;

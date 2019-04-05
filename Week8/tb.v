@@ -13,14 +13,15 @@ Instruction_Fetch if0(
 initial
 begin
   clk = 0;
-  reset = 1;
+  #5 reset = 1;
   
-  #30
+  #15
   begin
-    clk = ~clk;
+    //clk = ~clk;
     reset = ~reset;
   end
-  
+end
+  /*
   #30 
   //reset = ~reset;
   
@@ -40,9 +41,11 @@ begin
   
   #30
   clk = ~clk;
-  
-   #30
+  */
+  always
+  begin
+   #10
   clk = ~clk;
-end
+  end
 
 endmodule
