@@ -53,8 +53,7 @@ begin
   // control
   WB_Out = WB;
   M_Out = M;
-  ALUOp = EX[1:0];
-  ALUSrc = EX[2];
+  {ALUOp, ALUSrc} = EX;
 end
 
 endmodule
