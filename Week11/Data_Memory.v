@@ -77,8 +77,10 @@ DataMemory[62] = 8'd62;
 DataMemory[63] = 8'd63;
 end
 
-always @ (Mem_Addr or MemRead == 1)
+always @ (Mem_Addr)
 begin
+  if (MemRead)
+	begin
   Read_Data[7:0] = DataMemory[(Mem_Addr+0) %64];
   Read_Data[15:8] = DataMemory[(Mem_Addr+1) %64];
   Read_Data[23:16] = DataMemory[(Mem_Addr+2) %64];
@@ -87,6 +89,7 @@ begin
   Read_Data[47:40] = DataMemory[(Mem_Addr+5) %64];
   Read_Data[55:48] = DataMemory[(Mem_Addr+6) %64];
   Read_Data[63:56] = DataMemory[(Mem_Addr+7) %64];
+	end
 end
 
 always @ (posedge clk)

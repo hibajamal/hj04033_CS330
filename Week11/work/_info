@@ -1,0 +1,185 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\LENOVO\hj04033_CS330\Week11
+vAdder
+VX0bV5Md<>7B`Aa>CnEHzB3
+r1
+31
+Ii<<6@g=:2mHblj@KEQ`nU1
+Z1 w1553258962
+8Adder.v
+FAdder.v
+L0 1
+Z2 OE;L;6.5c;42
+Z3 o-L mtiAvm -L mtiOvm -L mtiUPF
+n@adder
+!s85 0
+!s100 I;mNVeQhgaF]8Be=X=_`>0
+vALU_64_bit
+VdPYhMKJe3jjeE70zPAUTW2
+r1
+31
+IoI<L=6V0eAUk1DAbk7j<Y0
+w1554461070
+8ALU_64_bit.v
+FALU_64_bit.v
+L0 1
+R2
+R3
+n@a@l@u_64_bit
+!s85 0
+!s100 VL@P2klU3d@?98f]DeWo40
+vALU_Control
+VJKiN[HX;K^A85inePJhil1
+r1
+31
+IU;1N[_=HW7TVHWR>2LVB43
+R1
+8ALU_Control.v
+FALU_Control.v
+L0 1
+R2
+R3
+n@a@l@u_@control
+!s85 0
+!s100 3:@LeY7?a6WD=aKUdPOTc0
+vControl_Unit
+VfNV5zcKMN`RgX9B=m7iAN3
+r1
+31
+I@Y0HGDLYPHV::eCWK`7cF2
+w1554468705
+8Control_Unit.v
+FControl_Unit.v
+L0 1
+R2
+R3
+n@control_@unit
+!s85 0
+!s100 ^h:adgCC=0dc0cS7lMMXj3
+vData_Memory
+VWhI`^IH<MF;>OG?BZf[A61
+r1
+!s85 0
+31
+I^h^>a;VGnQ:oZ01CRzGk30
+w1555674110
+8Data_Memory.v
+FData_Memory.v
+L0 1
+R2
+R3
+n@data_@memory
+!s100 fB321Mf6T`1G:GFSDBn4L0
+vImmediateDataExtractor
+VVc4J@e0T8L0]jO;4fdZc00
+r1
+31
+Ifo7[jQj[g7V][=CPiWKoF1
+w1554356406
+8IDG.v
+FIDG.v
+L0 1
+R2
+R3
+n@immediate@data@extractor
+!s85 0
+!s100 kWHgF6egY9CJbWAl=ngS43
+vInstruction_Memory
+VJzMT^LX:XF>m0VDm;?4>I1
+r1
+31
+IW<SB^]LVR>RQGL87=:OSb3
+w1554469161
+8Instruction_Memory.v
+FInstruction_Memory.v
+L0 1
+R2
+R3
+n@instruction_@memory
+!s85 0
+!s100 fg]CD:eFF4C2;7CVh?@Mg1
+vInstructionParser
+VEjFSA33jNgOm^1ig0oOId1
+r1
+31
+In4hIhcVN8H7aHdE<JF=I@3
+w1554470400
+8instructionParser.v
+FinstructionParser.v
+L0 1
+R2
+R3
+n@instruction@parser
+!s85 0
+!s100 5EKafm6W]>`z7@B1R`_3z1
+vmux
+VioN7BGO62a@N5R2R_@kAS1
+r1
+31
+I?Ce5BPHlDW6m`K[=kT@Nn2
+w1554461504
+8MUX.v
+FMUX.v
+L0 1
+R2
+R3
+!s85 0
+!s100 <8CX?91AP>;>C5GbPPH[=3
+vProgram_Counter
+V0k;<=6ibN>bm_@cF5k81F0
+r1
+31
+IeHjX>>bNSkILb_OJfcMA]1
+w1554456264
+8Program_Counter.v
+FProgram_Counter.v
+L0 1
+R2
+R3
+n@program_@counter
+!s85 0
+!s100 mZ`]lPa[LAGC]98N9ZXl[0
+vregisterFile
+VL8N5=Sn8FMcl`7dj:AVZc0
+r1
+31
+IM^OD?>=:O8LJI6m]IV^U^0
+w1555674044
+8registerFile.v
+FregisterFile.v
+L0 1
+R2
+R3
+nregister@file
+!s85 0
+!s100 `>0cQN6dh]MJCeh=21]X[0
+vRISC_V_Processor
+VRgiSXZUlZ;:LWPzP8h`NK1
+r1
+31
+IR85_f_bfVG2[CMZd`N>FC0
+w1554480588
+8RISC_V_Processor.v
+FRISC_V_Processor.v
+L0 1
+R2
+R3
+n@r@i@s@c_@v_@processor
+!s85 0
+!s100 ^HbId]36P[ZLTUeK7fdf41
+vtb
+VV@Xn<HnSRM[I5c1?BH]3a3
+r1
+31
+IdQiif>CEPMToilPPK_Jl:2
+w1554475639
+8tb.v
+Ftb.v
+L0 1
+R2
+R3
+!s85 0
+!s100 EZcg<O20KVc3^eUcVSofJ3

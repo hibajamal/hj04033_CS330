@@ -5,7 +5,7 @@ input [4:0] RS1, RS2, RD,
 output reg [63:0] ReadData1, reg [63:0] ReadData2
 );
 
-reg [31:0] Registers [63:0];
+reg [63:0] Registers [31:0];
 
 initial
 begin
@@ -43,12 +43,14 @@ Registers[30] = 64'd30;
 Registers[31] = 64'd31;
 end
 
-always @ (clk or RegWrite or reset or RS1  or RS2)
+always @ (posedge clk)
 begin  
-  if (RegWrite && clk)
-    begin
+  if (RegWrite)
     Registers[RD] = WriteData;
-    end
+end
+
+always @ (RS1 or RS2 or reset)
+begin
   if (reset)
     begin
     ReadData1 = 63'b0;
