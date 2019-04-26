@@ -1,5 +1,5 @@
 module EX_MEM(
-  input clk,
+  input clk, reset,
   
   // control
   input [1:0] WB,
