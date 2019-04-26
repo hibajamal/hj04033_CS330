@@ -16,8 +16,7 @@ module MEM_WB():
 
     always@(posedge clk)
     begin
-      Mem_to_Reg = WB[0];
-      Reg_Write = WB[1];
+      {Mem_to_Reg, Reg_Write}= WB;
       
       Read_Data_out = Read_Data;
       EX_MEM.Rd_out = EX_MEM.Rd;
