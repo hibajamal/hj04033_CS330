@@ -2,6 +2,11 @@ module top();
 reg clk;
 reg reset;
 
+PipeLinedProcessor p0(
+.clk(clk),
+.reset(reset)
+);
+
 initial 
 begin
   clk = 1
