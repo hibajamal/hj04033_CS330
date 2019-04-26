@@ -22,7 +22,7 @@ module EX_MEM(
   output reg [63:0] Forward_B_Mux_Result_Out,
   
   input [4:0] ID_EX_Rd,
-  input [4:0] ID_EX_Rd_Out
+  output reg [4:0] ID_EX_Rd_Out
 );
 
 always @ (posedge clk)
