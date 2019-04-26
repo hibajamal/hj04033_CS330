@@ -36,6 +36,7 @@ wire [63:0] Inst_Addr_Out_IF_ID;
 // IF_ID BUFFER
 IF_ID ifid0(
 .clk(clk),
+.reset(reset),
 .Instruction(Instruction),    // to instruction parser and ID/EX and immediate data extractor
 .Inst_Addr(PC_Out),
 .Instruction_Out(Instruction_Out_IF_ID),
@@ -124,6 +125,7 @@ wire ALUSrc_ID_EX;
 
 ID_EX id_ex0(
 .clk(clk),
+.reset(reset),
 .Inst_Addr(Inst_Addr_Out_IF_ID),
 .Inst_Addr_Out(Inst_Addr_Out_ID_EX),
 .RS1(rs1),
@@ -237,6 +239,7 @@ wire Branch_EX_MEM;
 
 EX_MEM em_mem0(
 .clk(clk),
+.reset(reset),
 .WB(WB_Out_ID_EX),
 .WB_Out(WB_Out_EX_MEM),
 .M(M_Out_ID_EX),
@@ -285,6 +288,8 @@ wire [63:0] MEM_WB_Mem_Address_out;
 // ouputs of MEM_WB:
 
 MEM_WB mem_wb0(
+.clk(clk),
+.reset(reset),
 .WB(WB_Out_EX_MEM),
 .Mem_to_Reg(Mem_to_Reg_MEM_WB),
 .Reg_Write(Reg_Write_MEM_WB),
