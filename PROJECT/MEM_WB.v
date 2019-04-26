@@ -6,8 +6,8 @@ module MEM_WB():
     input [63:0] Read_Data,
     output reg [63:0] Read_Data_out,
     
-    input [63:0] EX_MEM.Rd,
-    output reg [63:0] EX_MEM.Rd_out,
+    input [4:0] EX_MEM.Rd,
+    output reg [4:0] EX_MEM.Rd_out,
 
     input [63:0] EX_MEM.Mem_Address,
     output reg [63:0] EX_MEM.Mem_Address_out,
