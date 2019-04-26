@@ -1,5 +1,5 @@
 module ID_EX(
-  input clk, reset
+  input clk, reset,
   
   // data
   input [63:0] Inst_Addr,
