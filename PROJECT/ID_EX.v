@@ -5,14 +5,14 @@ module ID_EX(
   input [63:0] Inst_Addr,
   output reg [63:0] Inst_Addr_Out,
   
-  input [31:0] RS1,
-  output reg [31:0] RS1_Out,
+  input [4:0] RS1,
+  output reg [4:0] RS1_Out,
   
-  input [31:0] RS2,
-  output reg [31:0] RS2_Out,
+  input [4:0] RS2,
+  output reg [4:0] RS2_Out,
   
-  input [31:0] RD,
-  output reg [31:0] RD_Out,
+  input [4:0] RD,
+  output reg [4:0] RD_Out,
   
   input [63:0] ReadData1, 
   output reg [63:0] ReadData1_Out,
