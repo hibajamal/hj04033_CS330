@@ -1,5 +1,5 @@
 module ID_EX(
-  input clk,
+  input clk, reset,
   
   // data
   input [63:0] Inst_Addr,
@@ -56,4 +56,23 @@ begin
   {ALUOp, ALUSrc} = EX;
 end
 
+  always @ (reset)
+begin
+  // data
+  Inst_Addr_Out = 64'b0;
+  RS1_Out = 5'b0;
+  RS2_Out = 5'b0;
+  RD_Out = 5'b0;
+  ReadData1_Out = 64'b0;
+  ReadData2_Out = 64'b0;
+  ImmediateData_Out = 64'b0;
+  Funct = 4'b0;
+  
+  // control
+  WB_Out = 2'b0;
+  M_Out = 3'b0;
+  ALUOp = 2'b0; 
+  ALUSrc = 1'b0;
+end
+  
 endmodule

@@ -1,5 +1,5 @@
 module EX_MEM(
-  input clk,
+  input clk, reset,
   
   // control
   input [1:0] WB,
@@ -39,4 +39,17 @@ begin
   ID_EX_Rd_Out = ID_EX_Rd;
 end
 
+always @ (reset)
+begin
+  WB_Out = 2'b0;
+  Branch = 1'b0;
+  MemWrite = 1'b0;
+  MemRead = 1'b0;
+  Adder_Result_Out = 64'b0;
+  ALU_Zero_Out = 1'b0;
+  ALU_Result_Out = 64'b0;
+  Forward_B_Mux_Result_Out = 64'b0;
+  ID_EX_Rd_Out = 5'b0;
+end
+  
 endmodule
