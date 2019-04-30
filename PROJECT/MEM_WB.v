@@ -1,4 +1,4 @@
-module MEM_WB():
+module MEM_WB
 (
     input clk, reset,
     
@@ -12,14 +12,14 @@ module MEM_WB():
     output reg [4:0] EX_MEM_Rd_out,
 
     input [63:0] EX_MEM_Mem_Address,
-    output reg [63:0] EX_MEM_Mem_Address_out,
+    output reg [63:0] EX_MEM_Mem_Address_out
 
 );
 
     always@(posedge clk)
     begin
       {Mem_to_Reg, Reg_Write}= WB;
-      EX_MEM_MEM_Address = EX_MEM_Mem_Address_out;
+      EX_MEM_Mem_Address_out = EX_MEM_Mem_Address;
       Read_Data_out = Read_Data;
       EX_MEM.Rd_out = EX_MEM.Rd;
     end
