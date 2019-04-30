@@ -31,3 +31,5 @@ module Forwarding_Unit
 			ForwardB = 2'b01;
 		end
 	end
+
+endmodule
