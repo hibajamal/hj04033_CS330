@@ -97,11 +97,14 @@ wire [63:0]ReadData2; // regfile output 2
 
 wire Reg_Write_MEM_WB;
 
+// MEM WB Output:
+wire [63:0] Write_back_mux_result;
+
 registerFile rf0(
 .clk(clk),
 .reset(reset),
 .RegWrite(Reg_Write_MEM_WB),
-.WriteData(*************************************),
+.WriteData(Write_back_mux_result),
 .RS1(rs1),
 .RS2(rs2),
 .RD(MEM_WB_rd_out),
@@ -161,9 +164,6 @@ Adder small_adder (
 	.b(ImmediateData_Out_ID_EX << 1),
 	.out(adder_result)
 );
-
-// MEM WB Output:
-wire [63:0] Write_back_mux_result;
 
 // EX MEM output:
 wire [63:0] ALU_Result_Out_EX_MEM;
