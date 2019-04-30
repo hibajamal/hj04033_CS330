@@ -21,7 +21,7 @@ module MEM_WB
       {Mem_to_Reg, Reg_Write}= WB;
       EX_MEM_Mem_Address_out = EX_MEM_Mem_Address;
       Read_Data_out = Read_Data;
-      EX_MEM.Rd_out = EX_MEM.Rd;
+      EX_MEM_Rd_out = EX_MEM_Rd;
     end
 
     always@(reset)
