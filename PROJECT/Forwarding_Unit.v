@@ -13,6 +13,8 @@ module Forwarding_Unit
 
 	always@(*)
 	begin
+	  ForwardA = 2'b00;
+	  ForwardB = 2'b00;
 		if(EX_MEM_RegWrite && (EX_MEM_Rd != 5'b0) && (EX_MEM_Rd == ID_EX_RS1))
 		begin
 			ForwardA = 2'b10;
