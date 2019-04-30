@@ -51,10 +51,11 @@ wire [2:0]funct3;
 wire [4:0]rs1;
 wire [4:0]rs2;
 wire [6:0]funct7;
+wire [4:0] rd;
 
 // instruction going to ip to be divided up
 InstructionParser ip0(
-.instruction(Instruction),
+.instruction(Instruction_Out_IF_ID),
 .opcode(opcode),    // should go to control unit uper wala
 .rd(rd),      // to regfile and ID/EX
 .funct3(funct3),
@@ -85,7 +86,7 @@ Control_Unit cuPIPE(
 wire [63:0]imm_data;
 
 ImmediateDataExtractor idg0(
-.instruction(Instruction),
+.instruction(Instruction_Out_IF_ID),
 .imm_data(imm_data)
 );
 
@@ -143,7 +144,7 @@ ID_EX id_ex0(
 .ReadData2_Out(ReadData2_Out_ID_EX),
 .ImmediateData(imm_data),
 .ImmediateData_Out(ImmediateData_Out_ID_EX),
-.Instruction(Instruction),
+.Instruction(Instruction_Out_IF_ID),
 .Funct(Funct_ID_EX),
 .WB(WB),
 .WB_Out(WB_Out_ID_EX),
@@ -218,7 +219,7 @@ wire CarryOut;
 ALU_64_bit ALU (
 	.a(Forward_A_mux_result),
 	.b(Forward_B_mux_result),
-	.ALUOp(ALU_ALUOp),
+	.ALUop(ALU_ALUOp),
 	.Result(ALU_Result),
 	.CarryOut(CarryOut)
 );
