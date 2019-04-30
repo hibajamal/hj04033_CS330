@@ -1,4 +1,4 @@
-module top();
+module tb();
 reg clk;
 reg reset;
 
@@ -9,15 +9,15 @@ PipeLinedProcessor p0(
 
 initial 
 begin
-  clk = 1
-  reset = 0
+  clk = 1;
+  reset = 0;
   
-  #20 reset = 1
+  #20 reset = 1;
   
-  #10 reset = 0
+  #10 reset = 0;
 end
 
 always
-  #10 clk = ~clk
+  #10 clk = ~clk;
 
 endmodule
