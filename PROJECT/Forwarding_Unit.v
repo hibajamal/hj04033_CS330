@@ -13,19 +13,20 @@ module Forwarding_Unit
 
 	always@(*)
 	begin
-		if(EX_MEM_RegWrite and (EX_MEM_Rd != 5'b0) and (EX_MEM_Rd == ID_EX_RS1))
+		if(EX_MEM_RegWrite && (EX_MEM_Rd != 5'b0) && (EX_MEM_Rd == ID_EX_RS1))
 		begin
 			ForwardA = 2'b10;
 		end
-		if(MEM_WB_RegWrite and (MEM_WB_Rd != 5'b0) and (MEM_WB_Rd == ID_EX_RS1) and ~(EX_MEM_RegWrite and (EX_MEM_Rd != 0)) and (EX_MEM_Rd = ID_EX_RS1))
+		if(
+		MEM_WB_RegWrite && (MEM_WB_Rd != 5'b0) && (MEM_WB_Rd == ID_EX_RS1) && ~(EX_MEM_RegWrite && (EX_MEM_Rd != 0)) && (EX_MEM_Rd == ID_EX_RS1))
 		begin
 			ForwardA = 2'b01;
 		end
-		if(EX_MEM_RegWrite and (EX_MEM_Rd != 5'b0) and (EX_MEM_Rd == ID_EX_RS2))
+		if(EX_MEM_RegWrite && (EX_MEM_Rd != 5'b0) && (EX_MEM_Rd == ID_EX_RS2))
 		begin
 			ForwardB = 2'b10;
 		end
-		if(MEM_WB_RegWrite and (MEM_WB_Rd != 5'b0) and (MEM_WB_Rd == ID_EX_RS2) and ~(EX_MEM_RegWrite and (EX_MEM_Rd != 0)) and (EX_MEM_Rd = ID_EX_RS2))
+		if(MEM_WB_RegWrite && (MEM_WB_Rd != 5'b0) && (MEM_WB_Rd == ID_EX_RS2) && ~(EX_MEM_RegWrite && (EX_MEM_Rd != 0)) && (EX_MEM_Rd == ID_EX_RS2))
 		begin
 			ForwardB = 2'b01;
 		end
