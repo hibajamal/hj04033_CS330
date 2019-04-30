@@ -11,3 +11,5 @@ module Control_Unit
 	begin
 		{WB, M, EX} = Opcode;
 	end
+
+endmodule
