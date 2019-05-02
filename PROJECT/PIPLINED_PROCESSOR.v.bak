@@ -86,6 +86,7 @@ ImmediateDataExtractor idg0(
 
 // DATA FROM INSTRUCTION PARSER TO REGFILE
 
+wire [63:0]WriteData; // carrying output from data memory mux*******
 wire [63:0]ReadData1; // regfile output 1
 wire [63:0]ReadData2; // regfile output 2
 

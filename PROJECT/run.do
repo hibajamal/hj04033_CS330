@@ -2,7 +2,7 @@ vlog TOP.v MUX3.v Adder.v ALU_64_bit.v ALU_Control.v Control_Unit.v Data_Memory.
 
 vsim -novopt work.tb
 
-view wave
+view wave 
 
 do wave.do
 

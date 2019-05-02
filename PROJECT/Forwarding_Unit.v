@@ -11,10 +11,14 @@ module Forwarding_Unit
   output reg [1:0] ForwardB
 ); 	
 
-	always@(*)
-	begin
+initial
+begin
 	  ForwardA = 2'b00;
 	  ForwardB = 2'b00;
+end
+
+	always@(*)
+	begin
 		if(EX_MEM_RegWrite && (EX_MEM_Rd != 5'b0) && (EX_MEM_Rd == ID_EX_RS1))
 		begin
 			ForwardA = 2'b10;
